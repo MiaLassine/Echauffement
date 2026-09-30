@@ -66,11 +66,19 @@ class Program
 
         // Etape 6 : laissez l'utilisateur choisir l'une de ces 4 armes en indiquant un nombre entre 1 et 4
 
+        Console.WriteLine("\nVeuillez entrer le chiffre correspondant à l'arme que vous souhaitez acheter (1 - 4");
+        string? stringUserChoice = Console.ReadLine();
+        int intUserChoice = Convert.ToInt32(stringUserChoice);
+
         // Etape 7a : vérifiez si l'utilisateur a assez d'argent par rapport à la somme qu'il avait rentré à l'étape 4
+
+
 
         // Etape 7b : modifiez l'étape 7a pour ajouter un connecteur logique qui vérifie que l'utilisateur est majeur en plus d'avoir assez d'argent
         // Lorsque l'utilisateur respecte ces demandes, retirez le prix de l'arme de l'argent de l'utilisateur, puis confirmez à l'utilisateur que l'action a été effectuée 
         // Dans tous les autres cas, informez l'utilisateur que l'action n'a pas été possible
+
+
 
         /*
         Après votre dernier commit, faites un push de votre projet pour qu'il soit accessible sur github.com
