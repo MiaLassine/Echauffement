@@ -50,19 +50,19 @@ class Program
 
         string weaponChoice1 = "1. Katana";
         int weaponPrice1 = 1500;
-        Console.WriteLine(weaponChoice1 + " : " + weaponPrice1 + "euros");
+        Console.WriteLine(weaponChoice1 + " :\t\t" + weaponPrice1 + " euros");
 
         string weaponChoice2 = "2. Sabre long";
         int weaponPrice2 = 1500;
-        Console.WriteLine(weaponChoice2 + " : " + weaponPrice2 + "euros");
+        Console.WriteLine(weaponChoice2 + " :\t\t" + weaponPrice2 + " euros");
 
         string weaponChoice3 = "3. Revolver";
         int weaponPrice3 = 2000;
-        Console.WriteLine(weaponChoice3 + " : " + weaponPrice3 + "euros");
+        Console.WriteLine(weaponChoice3 + " :\t\t" + weaponPrice3 + " euros");
 
-        string weaponChoice4 = "4. Double hachette d'Indien";
+        string weaponChoice4 = "4. Double hachette";
         int weaponPrice4 = 1000;
-        Console.WriteLine(weaponChoice4 + " : " + weaponPrice4 + "euros");
+        Console.WriteLine(weaponChoice4 + " :\t" + weaponPrice4 + " euros");
 
         // Etape 6 : laissez l'utilisateur choisir l'une de ces 4 armes en indiquant un nombre entre 1 et 4
 
@@ -76,7 +76,8 @@ class Program
         Après votre dernier commit, faites un push de votre projet pour qu'il soit accessible sur github.com
         */
 
-        return 0; //Cela affiche une erreur dans la console parce que je ne peux pas mettre de return dans un void main.
-                  //Mais j'avais pour habitude de le mettre et ça ne pose pas trop de problème... Donc voilà
+        return; //Cela affiche une erreur dans la console parce que je ne peux pas mettre de "return 0;" dans un void main.
+                  //Mais j'avais pour habitude de le mettre et ça ne pose pas trop de problème... Donc voilà..
+                  //Finalement j'ai enlevé le "0", le message d'erreur me faisait chier
     }
 }
