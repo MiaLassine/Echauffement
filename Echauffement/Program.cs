@@ -74,7 +74,7 @@ class Program
         // Etape 7a : vérifiez si l'utilisateur a assez d'argent par rapport à la somme qu'il avait rentré à l'étape 4
 
         int weaponPrice0 = 0; //Initialisation de la variable weaponPrice0
-        string weaponChosen = "Shhh"; //Initialisation de la variable weaponChosen (j'ai essayé de mettre "null" sans guillemets et de mettre un "?" après le string,
+        string weaponChosen = "0"; //Initialisation de la variable weaponChosen (j'ai essayé de mettre "null" sans guillemets et de mettre un "?" après le string,
                                       //mais ça ne faisait pas ce que je voulais).
 
         if (intUserChoice == 1)
@@ -99,18 +99,26 @@ class Program
         }
         else
         {
-            Console.WriteLine("\nVeuillez indiquer un chiffre entre 1 et 4.");
+            Console.WriteLine("\nVeuillez indiquer un chiffre entre 1 et 4."); //J'ai essayé de faire du blindage mais cela ne fonctionne pas
         }
 
 
-        if(intUserMoney >= weaponPrice0) //vérification que le prix soit suffisant
+        if(intUserMoney >= weaponPrice0 && intUserAge >= 18) //vérification que le prix soit suffisant
         {
             Console.WriteLine("\nAchat confirmé.");
             Console.WriteLine("Vous possédez désormais " + "\"" + weaponChosen + "\".");
         }
-        else
+        else if(intUserMoney >= weaponPrice0)
+        {
+            Console.WriteLine("\nTransaction échouée, vous êtes trop jeune pour posséder une arme !");
+        }
+        else if(intUserAge >= 18)
         {
             Console.WriteLine("\nTransaction échouée, vous n'avez pas assez d'argent !");
+        }
+        else
+        {
+            Console.WriteLine("\nTransaction échouée, quelque chose s'est mal passé. Veuillez indiquer un chiffre entre 1 et 4.\n"); //Encore une fois, le blindage ne fonctionne pas.
         }
 
             // Etape 7b : modifiez l'étape 7a pour ajouter un connecteur logique qui vérifie que l'utilisateur est majeur en plus d'avoir assez d'argent
