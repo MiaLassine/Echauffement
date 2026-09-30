@@ -1,4 +1,8 @@
-﻿using System;
+﻿//Creator : Mia Lassine
+//Date : 30/09/2026
+//Programme : Echauffement
+
+using System;
 
 namespace Echauffement;
 
@@ -17,10 +21,12 @@ class Program
         // Etape 2 : demandez à l'utilisateur son prénom et son âge
 
         Console.WriteLine("\nComment dois-je t'appeler ?");
-        string? stringUserName = Console.ReadLine(); // le "?" après le string = Prévenir que la valeur peut être nulle (je ne comprenais pas le warn alors je me suis renseignée)
+        string? stringUserName = Console.ReadLine(); 
+        // le "?" après le string = Prévenir que la valeur peut être nulle (je ne comprenais pas le warn alors je me suis renseignée)
 
         Console.WriteLine("\nQuel âge as-Tu " + stringUserName + " ?");
-        string? stringUserAge = Console.ReadLine(); // le "?" après le string = Prévenir que la valeur peut être nulle
+        string? stringUserAge = Console.ReadLine(); 
+        // le "?" après le string = Prévenir que la valeur peut être nulle
         int intUserAge = Convert.ToInt32(stringUserAge);
 
         // Etape 3 : affichez soit "Tu es majeur", soit "Tu es mineur" dépendant de l'âge fourni par l'utilisateur
@@ -35,8 +41,9 @@ class Program
         }
         else
         {
-            Console.WriteLine("\nVeuillez indiquer une valeur correspondante"); //J'ai essayé de faire du blindage mais ça n'a pas trop marché...
-                                                                                //Mais ça ne cause pas de problème donc je laisse ça là
+            Console.WriteLine("\nVeuillez indiquer une valeur correspondante");
+            //J'ai essayé de faire du blindage mais ça n'a pas trop marché...
+            //Mais ça ne cause pas de problème donc je laisse ça là
         }
 
         // Etape 4 : demandez maintenant à l'utilisateur combien d'euro il a (nombre entier)
@@ -74,8 +81,9 @@ class Program
         // Etape 7a : vérifiez si l'utilisateur a assez d'argent par rapport à la somme qu'il avait rentré à l'étape 4
 
         int weaponPrice0 = 0; //Initialisation de la variable weaponPrice0
-        string weaponChosen = "0"; //Initialisation de la variable weaponChosen (j'ai essayé de mettre "null" sans guillemets et de mettre un "?" après le string,
-                                      //mais ça ne faisait pas ce que je voulais).
+        string weaponChosen = "0"; 
+        //Initialisation de la variable weaponChosen (j'ai essayé de mettre "null" sans guillemets et de mettre un "?" après le string,
+        //mais ça ne faisait pas ce que je voulais).
 
         if (intUserChoice == 1)
         {
@@ -99,11 +107,13 @@ class Program
         }
         else
         {
-            Console.WriteLine("\nVeuillez indiquer un chiffre entre 1 et 4."); //J'ai essayé de faire du blindage mais cela ne fonctionne pas
+            Console.WriteLine("\nVeuillez indiquer un chiffre entre 1 et 4."); 
+            //J'ai essayé de faire du blindage mais cela ne fonctionne pas
         }
 
 
-        if(intUserMoney >= weaponPrice0 && intUserAge >= 18) //vérification que le prix soit suffisant
+        if(intUserMoney >= weaponPrice0 && intUserAge >= 18) 
+            //vérification que le prix soit suffisant et que l'âge soit suffisant
         {
             Console.WriteLine("\nAchat confirmé.");
             Console.WriteLine("Vous possédez désormais " + "\"" + weaponChosen + "\".");
@@ -118,11 +128,14 @@ class Program
         }
         else
         {
-            Console.WriteLine("\nTransaction échouée, quelque chose s'est mal passé. Veuillez indiquer un chiffre entre 1 et 4.\n"); //Encore une fois, le blindage ne fonctionne pas.
+            Console.WriteLine("\nTransaction échouée, quelque chose s'est mal passé. Veuillez indiquer un chiffre entre 1 et 4.\n"); 
+            //Encore une fois, le blindage ne fonctionne pas.
         }
 
-            // Etape 7b : modifiez l'étape 7a pour ajouter un connecteur logique qui vérifie que l'utilisateur est majeur en plus d'avoir assez d'argent
-            // Lorsque l'utilisateur respecte ces demandes, retirez le prix de l'arme de l'argent de l'utilisateur, puis confirmez à l'utilisateur que l'action a été effectuée 
+            // Etape 7b : modifiez l'étape 7a pour ajouter un connecteur logique qui vérifie que l'utilisateur est majeur
+            // en plus d'avoir assez d'argent
+            // Lorsque l'utilisateur respecte ces demandes, retirez le prix de l'arme de l'argent de l'utilisateur,
+            // puis confirmez à l'utilisateur que l'action a été effectuée 
             // Dans tous les autres cas, informez l'utilisateur que l'action n'a pas été possible
 
 
