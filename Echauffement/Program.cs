@@ -5,8 +5,8 @@ class Program
     static void Main(string[] args)
     {
         /*
-         * Consigne générale : faites un commit entre chaque étape !
-         */
+        Consigne générale : faites un commit entre chaque étape !
+        */
 
         // Etape 1 : présentez-vous en écrivant votre prénom et votre jeu préféré
 
@@ -23,6 +23,16 @@ class Program
 
         // Etape 3 : affichez soit "Tu es majeur", soit "Tu es mineur" dépendant de l'âge fourni par l'utilisateur
 
+        if (intUserAge >= 18)
+        {
+            Console.WriteLine("\nTu es majeur !");
+        }
+        else if (intUserAge < 18)
+        {
+            Console.WriteLine("\nTu es mineur !");
+        }
+        else (Console.WriteLine("\nVeuillez indiquer une valeur correspondante");
+
         // Etape 4 : demandez maintenant à l'utilisateur combien d'euro il a (nombre décimal)
 
         // Etape 5 : affichez maintenant 4 choix d'armes avec chacune un prix
@@ -36,8 +46,8 @@ class Program
         // Dans tous les autres cas, informez l'utilisateur que l'action n'a pas été possible
 
         /*
-         * Après votre dernier commit, faites un push de votre projet pour qu'il soit accessible sur github.com
-         */
+        Après votre dernier commit, faites un push de votre projet pour qu'il soit accessible sur github.com
+        */
 
         return 0;
     }
