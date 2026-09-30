@@ -14,6 +14,13 @@ class Program
 
         // Etape 2 : demandez à l'utilisateur son prénom et son âge
 
+        Console.WriteLine("\nComment dois-je t'appeler ?");
+        string? stringUserName = Console.ReadLine(); // le "?" après le string = Prévenir que la valeur peut être nulle (je ne comprenais pas le warn alors je me suis renseignée)
+
+        Console.WriteLine("\nQuel âge as-Tu " + stringUserName + " ?");
+        string? stringUserAge = Console.ReadLine();
+        int intUserAge = Convert.ToInt32(stringUserAge);
+
         // Etape 3 : affichez soit "Tu es majeur", soit "Tu es mineur" dépendant de l'âge fourni par l'utilisateur
 
         // Etape 4 : demandez maintenant à l'utilisateur combien d'euro il a (nombre décimal)
@@ -31,5 +38,7 @@ class Program
         /*
          * Après votre dernier commit, faites un push de votre projet pour qu'il soit accessible sur github.com
          */
+
+        return 0;
     }
 }
