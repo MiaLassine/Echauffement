@@ -31,9 +31,16 @@ class Program
         {
             Console.WriteLine("\nTu es mineur !");
         }
-        else (Console.WriteLine("\nVeuillez indiquer une valeur correspondante");
+        else
+        {
+            Console.WriteLine("\nVeuillez indiquer une valeur correspondante");
+        }
 
         // Etape 4 : demandez maintenant à l'utilisateur combien d'euro il a (nombre décimal)
+
+        Console.WriteLine("\nQuelle somme d'argent possédez-vous ?");
+        string? stringUserMoney = Console.ReadLine();
+        int intUserMoney = Convert.ToInt32(stringUserMoney);
 
         // Etape 5 : affichez maintenant 4 choix d'armes avec chacune un prix
 
@@ -49,6 +56,7 @@ class Program
         Après votre dernier commit, faites un push de votre projet pour qu'il soit accessible sur github.com
         */
 
-        return 0;
+        return 0; //Cela affiche une erreur dans la console parce que je ne peux pas mettre de return dans un void main.
+                  //Mais j'avais pour habitude de le mettre et ça ne pose pas trop de problème... Donc voilà
     }
 }
