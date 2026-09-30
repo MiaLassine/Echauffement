@@ -1,4 +1,6 @@
-﻿namespace Echauffement;
+﻿using System;
+
+namespace Echauffement;
 
 class Program
 {
@@ -36,13 +38,31 @@ class Program
             Console.WriteLine("\nVeuillez indiquer une valeur correspondante");
         }
 
-        // Etape 4 : demandez maintenant à l'utilisateur combien d'euro il a (nombre décimal)
+        // Etape 4 : demandez maintenant à l'utilisateur combien d'euro il a (nombre entier)
 
-        Console.WriteLine("\nQuelle somme d'argent possédez-vous ?");
+        Console.WriteLine("\nCombien d'euros possédez-vous ?");
         string? stringUserMoney = Console.ReadLine();
         int intUserMoney = Convert.ToInt32(stringUserMoney);
 
         // Etape 5 : affichez maintenant 4 choix d'armes avec chacune un prix
+
+        Console.WriteLine("\nAvec " + intUserMoney + " euros, vous pouvez acheter ces 4 armes :");
+
+        string weaponChoice1 = "1. Katana";
+        int weaponPrice1 = 1500;
+        Console.WriteLine(weaponChoice1 + " : " + weaponPrice1 + "euros");
+
+        string weaponChoice2 = "2. Sabre long";
+        int weaponPrice2 = 1500;
+        Console.WriteLine(weaponChoice2 + " : " + weaponPrice2 + "euros");
+
+        string weaponChoice3 = "3. Revolver";
+        int weaponPrice3 = 2000;
+        Console.WriteLine(weaponChoice3 + " : " + weaponPrice3 + "euros");
+
+        string weaponChoice4 = "4. Double hachette d'Indien";
+        int weaponPrice4 = 1000;
+        Console.WriteLine(weaponChoice4 + " : " + weaponPrice4 + "euros");
 
         // Etape 6 : laissez l'utilisateur choisir l'une de ces 4 armes en indiquant un nombre entre 1 et 4
 
