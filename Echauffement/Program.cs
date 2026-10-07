@@ -115,8 +115,10 @@ class Program
         if(intUserMoney >= weaponPrice0 && intUserAge >= 18) 
             //vérification que le prix soit suffisant et que l'âge soit suffisant
         {
+            intUserMoney = intUserMoney - weaponPrice0;
             Console.WriteLine("\nAchat confirmé.");
             Console.WriteLine("Vous possédez désormais " + "\"" + weaponChosen + "\".");
+            Console.WriteLine("Il vous reste désormais " + intUserMoney + " euros.");
         }
         else if(intUserMoney >= weaponPrice0)
         {
